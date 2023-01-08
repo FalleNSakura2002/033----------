@@ -1,0 +1,90 @@
+/*这是一些用于实现主页面效果的css*/
+
+/*
+由于是第一次编写css，所以大多数定位方式
+都使用了相对容易的绝对定位
+*/
+
+/*这是用于每一个section的效果*/
+section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/*这是用于页面大标题的效果*/
+.mainpage-topic > img {
+  position: absolute;
+  width: 30%;
+  left: 10%;
+  top: 40%;
+}
+/*这是用于页面人物立绘的效果*/
+.mainpage-char1 > img {
+  position: absolute;
+  left: 46%;
+  top: 9%;
+  width: 29%;
+}
+.mainpage-char2 > img {
+  position: absolute;
+  left: 70%;
+  top: 9%;
+  width: 19%;
+}
+.mainpage-char3 > img {
+  position: absolute;
+  left: 60%;
+  top: 9%;
+  width: 24%;
+}
+/*这是首页底下白色渐变的效果*/
+.mainpage-char-back {
+  background: rgba(255, 255, 255, 0)
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.5) 75%,
+      rgba(255, 255, 255, 1) 100%
+    )
+    repeat scroll 0 0;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+}
+/*这是用于第二页表格背景的效果
+主要用于实现高斯模糊效果*/
+.table-back {
+  position: absolute;
+  left: 5%;
+  top: 110%;
+  width: 90%;
+  height: 85%;
+  border: 1px solid #000;
+  background-color: rgba(252, 251, 251, 0.7);
+  filter: blur(2px);
+}
+/*这是用于第二页的表格容器的效果*/
+.character {
+  position: absolute;
+  left: 250px;
+  top: 113%;
+}
+/*这是用于表格的效果*/
+.tab-content {
+  width: 105%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/*这是用于背景视频的效果
+由于原视频长宽比为4：3，所以此处手动指定长宽
+同时为了使其作为全局背景，设置层级为-99*/
+video {
+  height: 1920;
+  width: 1080;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}

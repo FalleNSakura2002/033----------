@@ -1,0 +1,122 @@
+/*这是一些用于实现导航栏效果的css*/
+
+body,
+/*这是用于整体网页的效果*/
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/*这是用于顶部导航栏的效果
+为了让其全局置顶，设置层级为99*/
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 66px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 1px 1px 0px rgb(0 0 0 / 0.75);
+}
+/*这是用于导航栏最左侧logo的效果*/
+.logo {
+  float: left;
+  width: 10%;
+  height: 66px;
+  margin-left: 1%;
+  position: relative;
+}
+.logo > img {
+  width: 120px;
+  height: 60px;
+  float: left;
+  position: absolute;
+  left: 20%;
+  top: 5.5px;
+}
+/*这是用于音乐控制器图标的效果*/
+.music {
+  float: left;
+  width: 10%;
+  height: 66px;
+  margin-left: 5px;
+  position: relative;
+}
+.music > img {
+  float: left;
+  left: 20%;
+  position: absolute;
+  top: 12.5px;
+}
+/*这是用于导航栏按钮的效果*/
+.header-nav {
+  position: relative;
+  width: 80%;
+  height: 66px;
+  float: left;
+  margin-left: -46px;
+  padding-right: 10px;
+}
+.header-nav-user {
+  position: relative;
+  width: 90%;
+  height: 66px;
+  float: left;
+  margin-left: -46px;
+  padding-right: 10px;
+}
+.topbar {
+  height: 66px;
+  width: 90%;
+  line-height: 66px;
+  font-size: 17px;
+}
+.left > a {
+  float: left;
+  width: 40px;
+  margin: 0 30px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.right > a {
+  float: right;
+  width: 40px;
+  margin: 0 30px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.right_login > a {
+  float: right;
+  margin: 0 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.right_login > img {
+  float: right;
+  width: 50px;
+  margin: 10px 10px;
+}
+
+.topbar a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/*这是用于设置音乐图标进行旋转*/
+img#musicicon {
+  animation-name: music;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+/*这是用于为音乐图标旋转动作打上关键帧*/
+@keyframes music {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

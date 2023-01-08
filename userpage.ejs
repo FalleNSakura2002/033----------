@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arknights-明日方舟</title>
+    <link rel="icon" href="img/title.png" />
+    <meta name="viewport" content width="device-width," initial-scale="1" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/userpage.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+  </head>
+  <body>
+    <!--设置全局背景视频，视频自动播放，且无限循环-->
+    <video
+      src="mp4/background.mp4"
+      autoplay
+      muted
+      loop
+      style="width: 100%"
+    ></video>
+    <!--设置顶部导航栏-->
+    <div class="header">
+      <!--导航栏左侧logo-->
+      <div class="logo">
+        <img src="img/index.png" />
+      </div>
+      <!--设置导航栏中间按钮-->
+      <div class="header-nav-user">
+        <div class="topbar">
+          <!--这是导航栏中间的“首页”和“背景”与“真 官网”三按钮，
+            分别绑定两个section可以实现网页滚动翻页和网页跳转-->
+          <div class="left">
+            <a href="/index.html">首&nbsp;页</a>
+            <a href="https://ak.hypergryph.com/#">真&nbsp;官&nbsp;网</a>
+          </div>
+          <!--这是导航栏右侧的用户名-->
+          <div class="right_login">
+            <a href="/index.html">退出</a>
+            <a href=""><%= Uname%></a>
+            <img id="userpic" src="img/罗德岛.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--这是登录表单的背景-->
+    <div class="table-back"></div>
+    <div class="welcome_pic">
+      <img id="wel_pic" src="img/RI_2.png" />
+    </div>
+    <div class="welcome">
+      <h1>DR.<%= Uname%></h1>
+      <h2>欢迎访问罗德岛招募终端！</h2>
+    </div>
+    <div class="startbut">
+      <form action="http://127.0.0.1:8080/zhaomu" method="GET">
+        <div class="d-grid">
+          <button type="submit1" class="btn btn-danger btn-lg btn-block">
+            开始招募
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="nearlonce">
+      <img id="nearpic" src= <%= imgsrc %> />
+    </div>
+    <div class="nearlonce_text">
+      <h2>最近招募</h2>
+      <h1><%= data[0].Chaname %></h1>
+    </div>
+    <!--这个div模拟垂直分割线-->
+    <div class="midline"></div>
+    <!--这是右侧招募记录-->
+    <div class="history_text">
+      <h1>招<br />募<br />记<br />录</h1>
+    </div>
+    <div class="history">
+      <!--这是一个表格，表格被设计为背景半透明状-->
+      <table class="table table-hover">
+        <!--表格的表头，为了让整个表格看起来不会很拥挤，设计了第三列为空列-->
+        <thead>
+          <tr>
+            <th>职业</th>
+            <th>干员名称</th>
+            <th>&nbsp;&nbsp;</th>
+            <th>获取时间</th>
+          </tr>
+        </thead>
+        <!--表格的具体内容，第一列为图标，第二列为名称，第三列为介绍-->
+        <tbody>
+          <% for(var i=1;i<data.length && i<14 ;i++){ %>
+            <tr>
+                <td><%= data[i].Chapoi %></td>
+                <td><%= data[i].Chaname %></td>
+                <td></td>
+                <td><%= data[i].date %></td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

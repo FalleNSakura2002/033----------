@@ -1,0 +1,112 @@
+/*这是用于第二页表格背景的效果
+主要用于实现高斯模糊效果*/
+.table-back {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  width: 90%;
+  height: 85%;
+  border: 1px solid #000;
+  background-color: rgba(252, 251, 251, 0.7);
+  filter: blur(2px);
+}
+
+/*这是用于登录表单的位置设计的*/
+.login-table {
+  position: absolute;
+  left: 66%;
+  top: 34%;
+  width: 15%;
+  height: 35%;
+}
+
+/*这是用于表单标题logo的效果*/
+.table-topic > img {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  width: 30%;
+}
+
+/*这是用于slogen的位置设计的*/
+.slogen > img {
+  position: absolute;
+  left: 66%;
+  top: 28%;
+  height: 0.9%;
+}
+.slogen-logo > img {
+  position: absolute;
+  left: 70%;
+  top: 15%;
+  height: 10%;
+}
+
+/*这是用于其他logo图标的效果*/
+.others-logo-1 > img {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+  height: 30%;
+}
+
+.others-logo-2 > img {
+  position: absolute;
+  left: 15%;
+  top: 60%;
+  height: 30%;
+}
+
+.others-logo-3 > img {
+  position: absolute;
+  left: 28%;
+  top: 60%;
+  height: 30%;
+}
+
+.others-logo-4 > img {
+  position: absolute;
+  left: 40%;
+  top: 60%;
+  height: 30%;
+}
+
+/*这是用于登陆面板中央分割线的效果*/
+.midline {
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  border: 1.2px solid;
+  float: left;
+  height: 65%;
+  color: #8d8787;
+}
+
+/*这是用于错误报告的效果*/
+.errmessage > h2 {
+  position: absolute;
+  left: 65%;
+  top: 50%;
+}
+.errmessage-2 > h2 {
+  position: absolute;
+  left: 68%;
+  top: 50%;
+}
+.errmessage-3 > h2 {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+}
+
+/*这是用于背景视频的效果
+  由于原视频长宽比为4：3，所以此处手动指定长宽
+  同时为了使其作为全局背景，设置层级为-99*/
+video {
+  height: 1920;
+  width: 1080;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}

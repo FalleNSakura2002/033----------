@@ -1,0 +1,94 @@
+/*这是用于第二页表格背景的效果
+主要用于实现高斯模糊效果*/
+.table-back {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  width: 90%;
+  height: 85%;
+  border: 1px solid #000;
+  background-color: rgba(252, 251, 251, 0.7);
+  filter: blur(2px);
+}
+
+/*这是用于欢迎用户的效果*/
+.welcome {
+  position: absolute;
+  left: 24%;
+  top: 20%;
+}
+.welcome > h1 {
+  font-size: 440%;
+}
+.welcome_pic > img {
+  position: absolute;
+  width: 23%;
+  left: 5%;
+  top: 10%;
+}
+
+/*这是用于招募按钮的效果*/
+.d-grid {
+  position: absolute;
+  width: 15%;
+  left: 25%;
+  top: 40%;
+}
+
+/*这是用于招募表的效果*/
+.nearlonce > img {
+  position: absolute;
+  width: 10%;
+  left: 13%;
+  top: 65%;
+}
+.nearlonce_text {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 73%;
+}
+.nearlonce_text > h2 {
+  font-size: 140%;
+}
+.nearlonce_text > h1 {
+  font-size: 340%;
+}
+
+/*这是用于表格容器的效果*/
+.history {
+  position: absolute;
+  width: 30%;
+  height: 20%;
+  left: 60%;
+  top: 30%;
+}
+.history_text {
+  position: absolute;
+  font-size: 150%;
+  left: 55%;
+  top: 30%;
+}
+
+/*这是用于面板中央分割线的效果*/
+.midline {
+  position: absolute;
+  left: 54%;
+  top: 30%;
+  border: 1.2px solid;
+  float: left;
+  height: 60%;
+  color: #8d8787;
+}
+
+/*这是用于背景视频的效果
+    由于原视频长宽比为4：3，所以此处手动指定长宽
+    同时为了使其作为全局背景，设置层级为-99*/
+video {
+  height: 1920;
+  width: 1080;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
