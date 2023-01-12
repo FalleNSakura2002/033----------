@@ -20,11 +20,11 @@ const sd = require("silly-datetime");
 
 //设置数据库连接信息
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "FALLcanyue2001",
-  port: "3306",
-  database: "test",
+  host: "localhost",  //请在此输入数据库对应host
+  user: "",  //请在此输入数据库管理员账号
+  password: "",  //请在此输入数据库管理员账号对应的密码
+  port: "",  //请在此输入数据库端口
+  database: "",  //请在此输入数据库名称
 });
 
 //建立数据库连接
